@@ -1,12 +1,47 @@
 // Iteration #1: Find the maximum
-
+function maxOfTwoNumbers(a, b){
+  const max = a > b ? a : b;
+  return max;
+}
 
 // Iteration #2: Find longest word
+//Una variable para guardar la palabra, 
+//Recorrer el Array de palabras Cada 
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+
+function findLongestWord(words) {
+  
+if (words.length == 0){
+  return null;
+}
+
+  let longestWord = words[0];
+    for (let i = 0; i < words.length; i++){
+      longestWord = words[i].length > longestWord.length ? words[i].length : longestWord
+    } 
+
+    return longestWord;
+}
+
+
+
+
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+let sumaTotal = 0;
+function sumNumbers(){
+
+  for(let i=0; i < numbers.length; i++){
+      seguentValor = numbers[i];
+      sumaTotal = sumaTotal + seguentValor;
+  }
+  return sumaTotal;
+};
+
+
+
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
@@ -29,10 +64,32 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+function uniquifyArray(arr){
+
+}
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
+function doesWordExist(words, wordToFind){
+  //Recorrer l'array words cada palabra
+  //Comparar si a la posició actual esta la paraula que ens pasen com a parametre word tofind
+  if (words.length == 0){
+    return null;
+  }
+
+  let trobada = false;
+  let i = 0;
+  while(!trobada && i<words.length){
+    if (wordToFind == words[i]){
+      trobada = true;
+    }
+    i++ //Continuar executant el bucle y seguir executant el array
+  }
+
+  return trobada;
+}
+console.log(doesWordExist(wordsFind, ))
 // Iteration #7: Count repetition
 const wordsCount = [
   'machine',
